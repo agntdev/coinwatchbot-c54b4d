@@ -1,19 +1,17 @@
 [
   {
-    "name": "Configure Quiet Hours",
+    "name": "Configure Quiet Hours shows current status",
     "steps": [
       {
+        "send": { "callback": "settings:quiet_hours" },
         "expect": [
           {
-            "method": "sendMessage",
+            "method": "editMessageText",
             "payload": {
-              "text": "Set quiet hours for alert suppression"
+              "text": "Quiet hours are not set.\n\nSet quiet hours to suppress alerts during certain times (e.g. overnight)."
             }
           }
-        ],
-        "send": {
-          "callback": "settings:quiet_hours"
-        }
+        ]
       }
     ]
   }

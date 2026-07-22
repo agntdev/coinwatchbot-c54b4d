@@ -1,19 +1,17 @@
 [
   {
-    "name": "Manage Alerts",
+    "name": "Manage Alerts shows empty state",
     "steps": [
       {
+        "send": { "callback": "alert:manage" },
         "expect": [
           {
-            "method": "sendMessage",
+            "method": "editMessageText",
             "payload": {
-              "text": "View and modify existing alerts"
+              "text": "No alerts yet — tap 🔔 Create Alert to set one up."
             }
           }
-        ],
-        "send": {
-          "callback": "alert:manage"
-        }
+        ]
       }
     ]
   }

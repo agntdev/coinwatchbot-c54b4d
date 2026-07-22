@@ -1,19 +1,17 @@
 [
   {
-    "name": "Create Alert",
+    "name": "Create Alert with empty watchlist shows helpful message",
     "steps": [
       {
+        "send": { "callback": "alert:create" },
         "expect": [
           {
-            "method": "sendMessage",
+            "method": "editMessageText",
             "payload": {
-              "text": "Start guided alert creation flow"
+              "text": "Your watchlist is empty — add a coin first before creating an alert."
             }
           }
-        ],
-        "send": {
-          "callback": "alert:create"
-        }
+        ]
       }
     ]
   }

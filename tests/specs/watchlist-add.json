@@ -1,19 +1,17 @@
 [
   {
-    "name": "Add Coin",
+    "name": "Add Coin shows coin selection buttons",
     "steps": [
       {
+        "send": { "callback": "watchlist:add" },
         "expect": [
           {
-            "method": "sendMessage",
+            "method": "editMessageText",
             "payload": {
-              "text": "Add a coin to watchlist with inline button options"
+              "text": "Pick a coin to add to your watchlist:"
             }
           }
-        ],
-        "send": {
-          "callback": "watchlist:add"
-        }
+        ]
       }
     ]
   }

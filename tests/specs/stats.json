@@ -1,19 +1,17 @@
 [
   {
-    "name": "/stats",
+    "name": "/stats without owner ID shows access denied",
     "steps": [
       {
+        "send": { "text": "/stats" },
         "expect": [
           {
             "method": "sendMessage",
             "payload": {
-              "text": "Request on-demand usage statistics"
+              "text": "This command is only available to the bot owner."
             }
           }
-        ],
-        "send": {
-          "text": "/stats"
-        }
+        ]
       }
     ]
   }

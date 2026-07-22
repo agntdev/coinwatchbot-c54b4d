@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Manage Alerts",
+    "steps": [
+      {
+        "expect": [
+          {
+            "method": "sendMessage",
+            "payload": {
+              "text": "View and modify existing alerts"
+            }
+          }
+        ],
+        "send": {
+          "callback": "alert:manage"
+        }
+      }
+    ]
+  }
+]
